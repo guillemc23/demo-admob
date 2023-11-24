@@ -1,16 +1,16 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core'
 import { NativeScriptCommonModule } from '@nativescript/angular'
-import { registerElement } from "@nativescript/angular";
 
 import { HomeRoutingModule } from './home-routing.module'
 import { HomeComponent } from './home.component'
 
+import { registerElement } from '@nativescript/angular';
+registerElement('GoogleSignInButton', () => require('@nativescript/google-signin').GoogleSignInButton);
 
-
-import { NativeAdView, MediaView, BannerAd } from "@nativescript/firebase-admob";
-registerElement("NativeAdView", () => NativeAdView);
-registerElement("MediaView", () => MediaView);
-registerElement("BannerAdView", () => BannerAd);
+// import { NativeAdView, MediaView, BannerAd } from "@nativescript/firebase-admob";
+// registerElement("NativeAdView", () => NativeAdView);
+// registerElement("MediaView", () => MediaView);
+// registerElement("BannerAdView", () => BannerAd);
 
 @NgModule({
   imports: [NativeScriptCommonModule, HomeRoutingModule],

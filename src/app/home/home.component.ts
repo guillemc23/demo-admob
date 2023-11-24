@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core'
 import { Drawer } from '@nativescript-community/ui-drawer';
-import { BannerAd, BannerAdSize } from '@nativescript/firebase-admob';
+// import { BannerAd, BannerAdSize } from '@nativescript/firebase-admob';
 
 @Component({
   selector: 'Home',
@@ -25,28 +25,25 @@ export class HomeComponent implements OnInit {
 	 * Triggers when the BannerAdView is ready and sets up the Ad parameters. Once the ad is showing, scroll the chat again
 	 * @param event
 	 */
-	async bannerLoaded(event: any) {
-		const bannerView = event.object as BannerAd;
-		const adSize = BannerAdSize.BANNER;
-    console.log(adSize)
-		//const adSize = BannerAdSize.FLUID;
-		//const adSize = BannerAdSize.createInLineAdaptiveBanner(bannerView.getActualSize().width, 50, "portrait");
-		// const adSize = BannerAdSize.createAnchoredAdaptiveBanner(bannerView.getActualSize().width, "portrait");
+	// async bannerLoaded(event: any) {
+	// 	const bannerView = event.object as BannerAd;
+	// 	const adSize = BannerAdSize.BANNER;
+    // console.log(adSize)
+	// 	//const adSize = BannerAdSize.FLUID;
+	// 	//const adSize = BannerAdSize.createInLineAdaptiveBanner(bannerView.getActualSize().width, 50, "portrait");
+	// 	// const adSize = BannerAdSize.createAnchoredAdaptiveBanner(bannerView.getActualSize().width, "portrait");
 
-		bannerView.size = adSize;
+	// 	bannerView.size = adSize;
 
-		bannerView.on("adLoaded", () => {
-			console.log("Ad loaded");
-		});
+	// 	bannerView.on("adLoaded", () => {
+	// 		console.log("Ad loaded");
+	// 	});
 
-		bannerView.on("adImpression", () => {
-			console.log("Ad impression");
-		});
+	// 	bannerView.on("adImpression", () => {
+	// 		console.log("Ad impression");
+	// 	});
 
-		bannerView.load();
-	}
+	// 	bannerView.load();
+	// }
 
-	onOpenDrawer() {
-        this.drawer.open();
-    }
 }
