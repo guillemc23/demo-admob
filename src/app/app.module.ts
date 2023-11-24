@@ -5,7 +5,7 @@ import { NativeScriptModule } from '@nativescript/angular'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 
-// import { firebase } from '@nativescript/firebase-core'
+import { firebase } from '@nativescript/firebase-core'
 // import { Admob } from "@nativescript/firebase-admob"
 import { APP_INITIALIZER } from '@angular/core';
 
@@ -14,7 +14,7 @@ import { DrawerModule } from "@nativescript-community/ui-drawer/angular";
 
 
 async function provideFirebaseApp() {
-  	// await firebase().initializeApp();
+  	await firebase().initializeApp();
     // Admob.init();
 }
 
