@@ -6,7 +6,9 @@
           <GridLayout rows="auto, *, auto" height="100%">
             <!-- Add your page content here -->
             <Label row="0" text="Google sign in button:"></Label>
-            <GoogleSignInButton row="1" colorScheme='auto' colorStyle='standard'></GoogleSignInButton>
+            <StackLayout row="1">
+                <GoogleSignInButton colorScheme='auto' colorStyle='standard'></GoogleSignInButton>
+            </StackLayout>
 
               <!-- <BannerAdView row="0" [unitId]="bannerAdId" (layoutChanged)="bannerLoaded($event)">
             </BannerAdView>  -->
